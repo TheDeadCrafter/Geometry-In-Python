@@ -1,6 +1,6 @@
 import pygame, sys
 import pygame.draw as draw
-
+import shading
 pygame.init()
 '''
 Last Edited: April 3rd
@@ -44,10 +44,11 @@ def canvas():
         [500,500]
     )
     #draw.polygon(screen, [255,0,0], poly_vertices, width=0)
-    draw.polygon(screen, [0,0,0], poly_vertices, 5)
-    draw.polygon(screen, [0,0,0], opp_poly, 5)
-    draw.line(screen, [0,0,0], [far_x,far_y], [500-far_x,far_y], 5)
-    draw.line(screen, [0,0,0], [far_x,500-far_y], [500-far_x, 500-far_y], 5)
+    #draw.polygon(screen, [0,0,0], poly_vertices, 5)
+    #draw.polygon(screen, [0,0,0], opp_poly, 5)
+    #draw.line(screen, [0,0,0], [far_x,far_y], [500-far_x,far_y], 5)
+    #draw.line(screen, [0,0,0], [far_x,500-far_y], [500-far_x, 500-far_y], 5)
+    shading.shade_quad(poly_vertices)
 
     pygame.display.flip()
 
