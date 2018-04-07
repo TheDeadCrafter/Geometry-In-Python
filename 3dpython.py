@@ -29,7 +29,7 @@ far_x = 100
 
 
 
-def draw():
+def canvas():
     screen.fill([255,255,255])
     poly_vertices = (
         [0,0],
@@ -68,7 +68,7 @@ while running:
             elif event.key == pygame.K_DOWN:
                 far_y -= delta
                 far_x -= delta
-    draw()
+    canvas()
 
     pygame.display.flip()
 running = False
