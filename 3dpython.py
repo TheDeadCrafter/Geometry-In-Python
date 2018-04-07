@@ -3,7 +3,7 @@ import pygame.draw as draw
 
 pygame.init()
 '''
-Last Edited: April 2nd
+Last Edited: April 3rd
 If you're on github, you can get some practice with being an intepreter
 I'm not gonna comment this code
 
@@ -44,10 +44,10 @@ def draw():
         [500,500]
     )
     #draw.polygon(screen, [255,0,0], poly_vertices, width=0)
-    pygame.draw.polygon(screen, [0,0,0], poly_vertices, 5)
-    pygame.draw.polygon(screen, [0,0,0], opp_poly, 5)
-    pygame.draw.line(screen, [0,0,0], [far_x,far_y], [500-far_x,far_y], 5)
-    pygame.draw.line(screen, [0,0,0], [far_x,500-far_y], [500-far_x, 500-far_y], 5)
+    draw.polygon(screen, [0,0,0], poly_vertices, 5)
+    draw.polygon(screen, [0,0,0], opp_poly, 5)
+    draw.line(screen, [0,0,0], [far_x,far_y], [500-far_x,far_y], 5)
+    draw.line(screen, [0,0,0], [far_x,500-far_y], [500-far_x, 500-far_y], 5)
 
     pygame.display.flip()
 
