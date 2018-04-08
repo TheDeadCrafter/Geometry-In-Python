@@ -44,12 +44,12 @@ poly_vertices = [
     200,100
 ]
 
+shade_quad(*poly_vertices)
 running = True
 while running:
-    shade_quad(*poly_vertices)
-    pygame.display.flip()
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             runnning = False
-
+            pygame.quit()
+    pygame.display.flip()
 running = False
