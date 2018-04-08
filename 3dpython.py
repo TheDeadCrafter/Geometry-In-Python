@@ -49,18 +49,18 @@ def canvas():
     #draw.line(screen, [0,0,0], [far_x,far_y], [500-far_x,far_y], 5)
     #draw.line(screen, [0,0,0], [far_x,500-far_y], [500-far_x, 500-far_y], 5)
     shading.shade_quad(poly_vertices)
-
+    shading.shade_quad(opp_poly)
     pygame.display.flip()
 
 delta = 1
 
 running = True
 while running:
-
+    print(delta)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
-
+            pygame.quit()
 
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_UP:
