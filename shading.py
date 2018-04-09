@@ -10,7 +10,7 @@ height = 500
 
 
 screen = pygame.display.set_mode([width,height])
-screen.fill([255,255,255])
+screen.fill([127/2,127/2,127/2])
 
 def shade_quad(x1, y1, x2, y2, resolution, direction, steps, grad_start):
     quad_width = x2-x1
@@ -58,10 +58,10 @@ poly_vertices = [
     200,200
 ]
 
-shade_quad(*poly_vertices, 25, 'left', 5, 120)
-shade_quad(*poly_vertices, 25, 'right', 5, 120)
-shade_quad(*poly_vertices, 25, 'down', 5, 120)
-shade_quad(*poly_vertices, 25, 'up', 5, 120)
+shade_quad(*poly_vertices, 50, 'left', 55, 127)
+shade_quad(*poly_vertices, 50, 'right', 55, 127)
+shade_quad(*poly_vertices, 50, 'down', 55, 127)
+shade_quad(*poly_vertices, 50, 'up', 55, 127)
 pygame.display.flip()
 
 running = True
